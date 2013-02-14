@@ -1,0 +1,81 @@
+<div class="foo">
+
+   <h2>
+    {{ page.title }}
+  </h2>
+
+  <div class="row-fluid">
+    <div class="span9" style="text-align: justify">
+      {{ content }}
+    </div>
+      
+    <div class="span3">
+      <p>
+        <span><i class="icon-time"></i>&nbsp;{{ page.date | date:"%B %e, %Y" }}</span>
+      </p>
+      <p>
+        <div class="comments-heading">
+          <span><i class="icon-comment"></i>&nbsp;<a href="{{ site.url }}{{ post.url }}#disqus_thread">Comments</a></span>
+        </div>
+      </p>
+      <p>
+      {% unless page.tags == empty %}
+        <ul class="tag_box inline">
+          {% assign tags_list = page.tags %}
+          {% include JB/tags_list %}
+        </ul>
+      {% endunless %} 
+      </p>
+      {% for auth in page.author %}
+        {% assign author = site.authors[auth] %}
+        
+        <div class="media">
+          <h4 class="media-heading">{{author.name}}</h4>
+          <a class="pull-left" href="#">
+            <img class="media-object img-circle" style="width:60px" src="http://en.gravatar.com/avatar/{{author.gravatar}}&amp;size=60">
+          </a>
+          <div class="media-body">
+            <h5 class="media-heading">{{author.company}}</h5>
+            <li><a href="http://github.com/{{author.github}}">Github</a></li>
+            <li><a href="http://twitter.com/{{author.twitter}}">Twitter</a></li>
+          </div>
+        </div>
+      {% endfor %}
+    </div>      
+
+  </div>
+    
+  <div class="row-fluid">
+    <div class="span4">
+      <div class="pagination">
+        <ul>
+        {% if page.previous %}
+          <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+        {% else %}
+          <li class="prev disabled"><a>&larr; Previous</a></li>
+        {% endif %}
+          <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+        {% if page.next %}
+          <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+        {% else %}
+          <li class="next disabled"><a>Next &rarr;</a>
+        {% endif %}
+        </ul>
+    </div>
+  </div>
+  
+  <div class="span4 social-buttons">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-via="{{ site.twitter }}" data-text="{{page.title}}" data-url="{{site.production_url}}{{page.url}}" data-lang="en">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <g:plusone size="medium" data-href="{{site.production_url}}{{page.url}}"></g:plusone>
+  </div>
+  
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <hr/>
+    {% include JB/comments %}
+  </div>
+</div>
+
+</div>

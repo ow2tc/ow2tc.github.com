@@ -1,0 +1,27 @@
+---
+layout: page
+title: Members
+tagline:
+author: [chamerling]
+
+---
+
+{% for auth in page.author %}
+  {% assign author = site.authors[auth] %}
+  
+  <div class="well">
+  <div class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object img-circle" src="http://en.gravatar.com/avatar/{{author.gravatar}}&amp;size=60">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">{{author.name}}</h4>
+      <h5 class="media-heading">{{author.company}}</h5>
+      <li><a href="http://github.com/{{author.github}}">Github</a></li>
+      <li><a href="http://twitter.com/{{author.twitter}}">Twitter</a></li>
+    </div>
+  </div> 
+</div>
+  
+{% endfor %}
+

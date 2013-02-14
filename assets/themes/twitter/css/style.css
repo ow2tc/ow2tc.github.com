@@ -1,0 +1,88 @@
+/* Override some defaults */
+.navbar {
+  margin-bottom: 0;
+}
+.container > footer {
+  margin-top: 20px;
+}
+.container > footer p {
+  text-align: center; /* center align it with the container */
+}
+
+/* The white background content wrapper */
+.content {
+  font-size: 16px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+          box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+/* Page header tweaks */
+.page-header {
+  background-color: #f5f5f5;
+  padding: 20px 20px 10px;
+  margin: -20px -20px 20px;
+}
+
+.topbar .btn {
+  border: 0;
+}
+
+
+/* tag_box ======================================================== */
+
+.tag_box {
+	list-style:none;
+	margin:0;
+	overflow:hidden;
+}
+.tag_box li {
+	margin-right: 10px;
+}
+.tag_box li i {
+	margin-right: 2px;
+}
+.tag_box.inline li {
+	float:left;
+}
+.tag_box a span {
+	vertical-align:super;
+	font-size:0.8em;
+}
+
+i#atom-feed {
+    background-image: url(../img/feed-icon.png);
+	background-position: 0 0;
+}
+div.post-title {
+    background-color: #F5F5F5;
+    border:1px solid #F2E9E1;
+	padding: 0 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.post-title h1 {
+    font-size: 42px;
+}
+h1 a {
+    color : inherit;
+}
+h1 a:hover {
+    text-decoration: none;
+}
+div.comments-heading {
+    text-align: left;
+}
+div.authors, div.pages {
+    text-align: center;
+}
+div.social-buttons {
+    text-align: left;
+    margin: 22px 0;
+}
