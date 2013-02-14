@@ -13,6 +13,7 @@ title: OW2.org Technology Council
 tagline: OW2.org Technology Council;
 gplus: 114314851813180219532
 twitter: ow2tc
+avatar: https://twimg0-a.akamaihd.net/profile_images/3243581947/10fb7c32f6fe178d10f30412a65155a0_bigger.png
 authors:
   chamerling:
     name : Christophe Hamerling
@@ -20,6 +21,15 @@ authors:
     twitter : chamerling
     gravatar : b6c497af6bc43da74f94095683908ca7
     company : Linagora
+    company_url : http://linagora.com
+    webpage : http://chamerling.org
+  alefebvre:
+    name : Alexandre Lefebvre
+    twitter : alefebvr
+    avatar : https://twimg0-a.akamaihd.net/profile_images/566400568/alex3new_bigger.jpg
+    company : Orange - OW2
+    company_url : http://orange.com
+    webpage : http://ow2.org
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

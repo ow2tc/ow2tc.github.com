@@ -2,7 +2,7 @@
 layout: page
 title: Members
 tagline:
-author: [chamerling]
+author: [alefebvre, chamerling, foo]
 
 ---
 
@@ -12,13 +12,28 @@ author: [chamerling]
   <div class="well">
   <div class="media">
     <a class="pull-left" href="#">
+      {% if author.gravatar %}
       <img class="media-object img-circle" src="http://en.gravatar.com/avatar/{{author.gravatar}}&amp;size=60">
+      {% else if author.avatar %} 
+      <img class="media-object img-circle" src="{{author.avatar}}">
+      {% else %}
+      <img class="media-object img-circle" src="http://en.gravatar.com/avatar/123&amp;size=60">
+      {% endif %}      
     </a>
     <div class="media-body">
       <h4 class="media-heading">{{author.name}}</h4>
-      <h5 class="media-heading">{{author.company}}</h5>
+      {% if author.company %}
+      <h5 class="media-heading"><a target="_blank" href="{{author.company_url}}">{{author.company}}</a></h5>
+      {% endif %}
+      {% if author.webpage %}
+      <li><a href="{{author.webpage}}">Web</a></li>
+      {% endif %}
+      {% if author.github %}
       <li><a href="http://github.com/{{author.github}}">Github</a></li>
+      {% endif %}
+      {% if author.twitter %}
       <li><a href="http://twitter.com/{{author.twitter}}">Twitter</a></li>
+      {% endif %}
     </div>
   </div> 
 </div>
