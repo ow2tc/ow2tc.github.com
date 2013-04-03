@@ -39,7 +39,7 @@ authors:
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://ow2tc.github.com
+production_url : http://tc.ow2.org
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
