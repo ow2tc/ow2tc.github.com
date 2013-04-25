@@ -30,6 +30,15 @@ authors:
     company : Orange - OW2
     company_url : http://orange.com
     webpage : http://ow2.org
+  fgarin:
+    name : Florent Garin
+    twitter : docdoku
+    avatar : http://www.gravatar.com/avatar/d23a5d528edd9dc5051db3b320eb39a9.png
+    company : DocDoku
+    company_url : http://www.docdoku.com
+    webpage : http://www.docdoku.com/blog/
+    
+    
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
